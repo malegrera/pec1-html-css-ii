@@ -2,11 +2,20 @@
  * Use this file to import partials.
  * Do not include SCSS code in this file.
  */
-
+/**
+ * Import variables and mixins first
+ */
+@use "variables" as *;
+@use "mixins" as *;
 /**
  * Import dependencies
  */
 @use "dependencies";
+
+/**
+ * Import components
+ */
+@use "components" as *;
 
 /**
  * Import layouts

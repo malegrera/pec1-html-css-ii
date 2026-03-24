@@ -1,12 +1,19 @@
 @use "sass:color";
 
-$font-family-sans-serif:
-  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
-  Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-$font-family-serif: "Georgia", "Times New Roman", serif;
+// Colores
+$uoc-bg: #f5f5f5;
+$uoc-corporate: #005aa7;
+$primary-color: #3498db;
+$secondary-color: #f1c40f;
+$card-bg: #ffffff;
+$text-light: #ffffff;
+$text-dark: #333333;
+$text-muted: #666666;
+$black: #000;
 
-$uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+// Tipografía
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif: "Georgia", serif;
 
-$mqMinWidth: 420px;
+// Media queries
+$mqMinWidth: 768px;
