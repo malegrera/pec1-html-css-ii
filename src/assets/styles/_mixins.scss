@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 // Mixin para media queries
 @mixin respond-to($device) {
   @if $device == "tablet" {

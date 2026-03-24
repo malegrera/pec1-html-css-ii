@@ -1,3 +1,7 @@
+@use "variables" as *;
+@use "mixins" as *;
+@use "sass:color";
+
 // ===========================
 // HEADER
 // ===========================
@@ -84,7 +88,7 @@
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: darken($primary-color, 10%);
+    background-color: color.adjust($primary-color, $lightness: -10%);
   }
 
   &--secondary {
@@ -92,7 +96,7 @@
     color: $text-dark;
 
     &:hover {
-      background-color: lighten($secondary-color, 10%);
+      background-color: color.adjust($primary-color, $lightness: 10%);
     }
   }
 }
