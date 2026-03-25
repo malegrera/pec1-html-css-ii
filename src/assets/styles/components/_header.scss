@@ -7,14 +7,14 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 20vh;
-
+  height: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 
   h1 {
+    font-family: $font-title;
     color: $text-light;
     font-size: 2rem;
     font-weight: bold;
@@ -28,7 +28,7 @@
 
 .header__nav {
     display: flex;
-    gap: 10px;
+    gap: 1vh;
 
     .header__link {
       display: inline-block;
