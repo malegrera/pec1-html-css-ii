@@ -51,6 +51,8 @@
   "dependencies": {
     "@fontsource/baumans": "^5.2.8",
     "@fontsource/poppins": "^5.2.7",
-    "@fortawesome/fontawesome-free": "^7.2.0"
+    "@fortawesome/fontawesome-free": "^7.2.0",
+    "@glidejs/glide": "^3.7.1",
+    "swiper": "^12.1.3"
   }
 }

@@ -6,11 +6,12 @@
 // import 'some-node-module';
 // import SomeModule from 'some-node-module';
 
+import Gallery from './gallery';
+
 /**
  * Write any other JavaScript below
  */
+document.addEventListener('DOMContentLoaded', () => {
+  Gallery();
+});
 
-+(function () {
-  const university = "UOC";
-  console.log(`Hello, ${university}!`);
-})();
