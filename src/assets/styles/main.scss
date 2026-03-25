@@ -15,7 +15,9 @@
 /**
  * Import components
  */
-@use "components";
+@use "components/components";
+@use "components/header";
+@use "components/footer";
 
 /**
  * Import layouts

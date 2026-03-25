@@ -1,13 +1,22 @@
 // Importa componentes y variables
 @use "../variables" as *;
 @use "../mixins" as *;
-@use "../components" as *;
+@use "../components/components" as *;
 
+
+body {
+  font-family: $font-family-sans-serif;
+  color: $primary-color;
+}
+i {
+    margin-right: 10px;
+    color: $iconos;
+}
 // ===========================
 // HERO
 // ===========================
 .home-hero {
-  @extend .header;
+  @extend .header !optional;
   flex-direction: column;
   padding: 2rem;
 
@@ -97,14 +106,3 @@
   }
 }
 
-// ===========================
-// FOOTER
-// ===========================
-.home-footer {
-  @extend .footer;
-
-  &__nav {
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-}

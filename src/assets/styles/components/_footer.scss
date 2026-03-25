@@ -1,0 +1,72 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+@use "sass:color";
+
+.footer {
+    width: 100%;
+    background: linear-gradient(to top, $azul-agua, $black);
+    color: $text-light;
+    padding: 40px 20px 20px;
+
+    font-family: $font-family-sans-serif;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+
+        @media (min-width: $mqMinWidth) {
+            grid-template-columns: repeat(3, 1fr);
+            text-align: left;
+        }
+    }
+
+    h2 {
+        font-family: $font-family-serif;
+        color: $secondary-color;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        color: $secondary-color;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 0.9rem;
+        color: $text-muted;
+    }
+
+    a {
+        display: block;
+        color: $text-light;
+        text-decoration: none;
+        margin: 5px 0;
+        transition: 0.3s;
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+
+    i {
+        margin-right: 8px;
+        color: $iconos;
+    }
+
+    &__social a {
+        display: inline-block;
+        font-size: 1.2rem;
+        margin-right: 10px;
+    }
+
+    &__bottom {
+        margin-top: 30px;
+        border-top: 1px solid $text-muted;
+        text-align: center;
+        padding-top: 15px;
+        font-size: 0.8rem;
+        color: $text-muted;
+    }
+}
