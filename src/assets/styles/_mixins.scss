@@ -1,20 +1,8 @@
 @use "variables" as *;
 
 // Mixin para media queries
-@mixin respond-to($device) {
-  @if $device == "tablet" {
-    @media (min-width: $mqMinWidth) {
-      @content;
-    }
+@mixin mediaquery($device) {
+  @media (max-width: map-get($breakpoints, $device)) {
+    @content;
   }
-  @else if $device == "mobile" {
-    @media (max-width: 480px) {
-      @content;
-    }
-  }
-}
-
-// Función ejemplo: convertir px a rem
-@function px-to-rem($px, $base: 16) {
-  @return #{$px / $base}rem;
 }

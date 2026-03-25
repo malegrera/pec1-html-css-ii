@@ -49,6 +49,8 @@
     "stylelint-scss": "^7.0.0"
   },
   "dependencies": {
+    "@fontsource/baumans": "^5.2.8",
+    "@fontsource/poppins": "^5.2.7",
     "@fortawesome/fontawesome-free": "^7.2.0"
   }
 }

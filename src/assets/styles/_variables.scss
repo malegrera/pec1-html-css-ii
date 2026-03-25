@@ -17,7 +17,10 @@ $iconos-light: #ffd700;
 
 // Tipografía
 $font-family-sans-serif: 'Poppins', Helvetica, Arial, sans-serif;
-$font-family-serif: 'Playfair Display', serif;;
-
+$font-family-serif: 'Baumans', serif;
 // Media queries
-$mqMinWidth: 768px;
+$breakpoints: (
+  "mobile": 480px,
+  "tablet": 768px,
+  "desktop": 1024px
+);

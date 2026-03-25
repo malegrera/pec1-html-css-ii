@@ -8,10 +8,12 @@ body {
   font-family: $font-family-sans-serif;
   color: $primary-color;
 }
+
 i {
-    margin-right: 10px;
-    color: $iconos;
+  margin-right: 10px;
+  color: $iconos;
 }
+
 // ===========================
 // HERO
 // ===========================
@@ -30,7 +32,7 @@ i {
     max-width: 600px;
     margin: 0 auto;
 
-    @include respond-to("tablet") {
+    @include mediaquery("tablet") {
       font-size: 1.2rem;
     }
   }
@@ -49,9 +51,10 @@ i {
     font-size: 2rem;
     margin-bottom: 1rem;
 
-    @include respond-to("tablet") {
+     @include mediaquery("tablet") {
       font-size: 2.5rem;
     }
+    
   }
 
   p {
@@ -76,10 +79,9 @@ i {
 
     .card-image {
       height: 150px;
-
-      @include respond-to("tablet") {
-        height: 200px;
-      }
+       @include mediaquery("tablet") {
+       height: 200px;
+    }
     }
   }
 }
@@ -105,4 +107,3 @@ i {
     @extend .button;
   }
 }
-
