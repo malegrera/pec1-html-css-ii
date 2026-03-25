@@ -5,8 +5,8 @@
 /**
  * Import variables and mixins first
  */
-@use "variables" as *;
-@use "mixins" as *;
+@use "variables";
+@use "mixins";
 /**
  * Import dependencies
  */
@@ -15,7 +15,7 @@
 /**
  * Import components
  */
-@use "components" as *;
+@use "components";
 
 /**
  * Import layouts
