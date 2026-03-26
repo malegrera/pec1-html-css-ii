@@ -5,6 +5,7 @@
 
 html {
   box-sizing: border-box;
+   scroll-behavior: smooth;
 }
 
 *, *::before, *::after {
@@ -21,12 +22,11 @@ i {
   color: $iconos;
 }
 
-//SECTION
+
 .section {
   padding: 30px 15px;
   text-align: center;
 
-  // ELEMENTOS
   &__title {
     font-size: 1.5rem;
     font-family: $font-title;
@@ -38,6 +38,12 @@ i {
     display: flex;
     flex-direction: column; // mobile first
     gap: 15px;
+    align-items: center;
+     @include mediaquery("tablet") {
+      flex-direction: row; // 👉 horizontal
+      align-items: flex-start;
+      text-align: left;
+    }
   }
 
   &__image {
@@ -45,33 +51,19 @@ i {
     height: auto;
     border-radius: 10px;
     object-fit: cover;
+    @include mediaquery("tablet") {
+      width: 25%;
+    }
   }
 
   &__text {
     font-size: 0.95rem;
     color: $text-muted;
-  }
-
-  // ======================
-  // TABLET
-  // ======================
-  @include mediaquery("tablet") {
-    text-align: left;
-
-    &__body {
-      flex-direction: row;
-      align-items: center;
-    }
-
-    &__image,
-    &__text {
-      width: 50%;
+     @include mediaquery("tablet") {
+      width: 75%;
     }
   }
 
-  // ======================
-  // MODIFICADORES (BEM)
-  // ======================
 
   &--image-right {
     @include mediaquery("tablet") {
@@ -85,9 +77,6 @@ i {
     // opcional, por defecto ya es izquierda
   }
 
-  // ======================
-  // DESKTOP
-  // ======================
   @include mediaquery("desktop") {
     padding: 50px 80px;
 

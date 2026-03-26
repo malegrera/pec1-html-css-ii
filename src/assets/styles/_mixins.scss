@@ -3,7 +3,7 @@
 
 // Mixin para media queries
 @mixin mediaquery($device) {
-  @media (max-width: map.get($breakpoints, $device)) {
+  @media (min-width: map.get($breakpoints, $device)) {
     @content;
   }
 }
