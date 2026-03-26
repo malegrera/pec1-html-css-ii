@@ -21,6 +21,97 @@ i {
   color: $iconos;
 }
 
+//SECTION
+.section {
+  padding: 30px 15px;
+  text-align: center;
+
+  // ELEMENTOS
+  &__title {
+    font-size: 1.5rem;
+    font-family: $font-title;
+    color: $secondary-color;
+    margin-bottom: 15px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column; // mobile first
+    gap: 15px;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  &__text {
+    font-size: 0.95rem;
+    color: $text-muted;
+  }
+
+  // ======================
+  // TABLET
+  // ======================
+  @include mediaquery("tablet") {
+    text-align: left;
+
+    &__body {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &__image,
+    &__text {
+      width: 50%;
+    }
+  }
+
+  // ======================
+  // MODIFICADORES (BEM)
+  // ======================
+
+  &--image-right {
+    @include mediaquery("tablet") {
+      .section__body {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  &--image-left {
+    // opcional, por defecto ya es izquierda
+  }
+
+  // ======================
+  // DESKTOP
+  // ======================
+  @include mediaquery("desktop") {
+    padding: 50px 80px;
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__text {
+      font-size: 1rem;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 // ===========================
 // HERO
 // ===========================
