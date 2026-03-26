@@ -40,7 +40,7 @@ i {
     gap: 15px;
     align-items: center;
      @include mediaquery("tablet") {
-      flex-direction: row; // 👉 horizontal
+      flex-direction: row; // horizontal
       align-items: flex-start;
       text-align: left;
     }
@@ -87,110 +87,5 @@ i {
     &__text {
       font-size: 1rem;
     }
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-// ===========================
-// HERO
-// ===========================
-.home-hero {
-  @extend .header !optional;
-  flex-direction: column;
-  padding: 2rem;
-
-  h1 {
-    margin-bottom: 1rem;
-  }
-
-  p {
-    color: $text-light;
-    font-size: 1rem;
-    max-width: 600px;
-    margin: 0 auto;
-
-    @include mediaquery("tablet") {
-      font-size: 1.2rem;
-    }
-  }
-}
-
-// ===========================
-// INFO
-// ===========================
-.home-info {
-  padding: 3rem 2rem;
-  text-align: center;
-  background-color: $azul-agua;
-
-  h2 {
-    font-family: $font-title;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-
-     @include mediaquery("tablet") {
-      font-size: 2.5rem;
-    }
-    
-  }
-
-  p {
-    font-size: 1rem;
-    line-height: 1.6;
-    max-width: 700px;
-    margin: 0 auto;
-  }
-}
-
-// ===========================
-// GALLERY
-// ===========================
-.home-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem;
-
-  .card {
-    @extend .card;
-
-    .card-image {
-      height: 150px;
-       @include mediaquery("tablet") {
-       height: 200px;
-    }
-    }
-  }
-}
-
-// ===========================
-// CALL TO ACTION
-// ===========================
-.home-cta {
-  background-color: $primary-color;
-  color: $text-light;
-  padding: 2rem;
-  text-align: center;
-  border-radius: 1rem;
-  margin: 2rem auto;
-  max-width: 600px;
-
-  p {
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-  }
-
-  .button {
-    @extend .button;
   }
 }
