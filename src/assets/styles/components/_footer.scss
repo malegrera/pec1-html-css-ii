@@ -6,31 +6,27 @@
     width: 100%;
     background: linear-gradient(to top, $azul-agua, $black);
     color: $text-light;
-    padding: 40px 20px 20px;
-
+    padding: 30px 15px 15px;
     font-family: $font-text;
+    text-align: center;
 
     &__container {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 30px;
-        text-align: center;
-
-        @include mediaquery("tablet") {
-            grid-template-columns: repeat(3, 1fr);
-            text-align: left;
-        }
+        gap: 25px;
     }
 
     h2 {
         font-family: $font-title;
         color: $secondary-color;
         margin-bottom: 10px;
+        font-size: 1.4rem;
     }
 
     h3 {
         color: $secondary-color;
         margin-bottom: 10px;
+        font-size: 1.1rem;
     }
 
     p {
@@ -62,11 +58,27 @@
     }
 
     &__bottom {
-        margin-top: 30px;
+        margin-top: 25px;
         border-top: 1px solid $text-muted;
-        text-align: center;
         padding-top: 15px;
         font-size: 0.8rem;
         color: $text-muted;
     }
+
+    @include mediaquery("tablet") {
+        padding: 40px 20px 20px;
+        text-align: left;
+
+        &__container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @include mediaquery("desktop") {
+        &__container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+
 }

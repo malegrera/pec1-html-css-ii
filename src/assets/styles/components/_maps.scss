@@ -1,0 +1,12 @@
+.maps {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  iframe {
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 4 / 3; // mantiene proporción
+    border: 0;
+  }
+}
