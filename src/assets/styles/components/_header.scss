@@ -34,20 +34,25 @@
   align-items: center;
   width: 100%;
   padding: 1vh 0;
-    @include mediaquery("tablet") {
-      flex-direction: row;
-      justify-content: center;
-  }
+  gap: 0.5rem;
 
   .header__link {
-    display: block;
-    padding: 8px 10px;
+ display: flex; // permite que iconos y texto estén alineados
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem; // espacio entre icono y texto
+    padding: 8px 12px;
     font-size: 0.9rem;
     background-color: $verde;
     color: $arena;
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s;
+
+    i { // estilos para los iconos
+      font-size: 1.2rem; // ajusta tamaño del icono
+      vertical-align: middle;
+    }
 
     &:hover {
       background-color: $secondary-color;
@@ -61,6 +66,21 @@
       }
     }
   }
+}
 
+@include mediaquery("tablet") {
+  .header__nav {
+    flex-direction: row; // horizontal en tablet/desktop
+    justify-content: center;
+    gap: 1vh;
 
+    .header__link {
+      padding: 10px 15px;
+      font-size: 1rem;
+
+      i {
+        font-size: 1.4rem; // íconos más grandes en pantallas grandes
+      }
+    }
+  }
 }
