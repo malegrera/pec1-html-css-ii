@@ -7,7 +7,7 @@ $transition-speed: 0.5s;
 $box-shadow-default: 0 4px 6px rgba(0, 0, 0, 0.1);
 $box-shadow-hover: 0 10px 20px rgba(0, 0, 0, 0.2);
 
-.gallery.glide {
+.glide {
   max-width: 50%;
   margin: 0 auto;
   position: relative; // necesario para posicionar los botones

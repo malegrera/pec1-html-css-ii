@@ -3,6 +3,13 @@
 @use "../mixins" as *;
 @use "../components/components" as *;
 
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
 
 body {
   font-family: $font-text;
