@@ -25,46 +25,73 @@ i {
 
 
 .section {
-  padding: 30px 15px;
+  padding: 2rem 1rem;
   text-align: center;
 
   &__title {
     font-size: 1.5rem;
     font-family: $font-title;
     color: $secondary-color;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
   }
 
   &__body {
     display: flex;
     flex-direction: column; 
-    gap: 15px;
+    gap: 1rem;
     align-items: center;
 
     @include mediaquery("tablet") {
       flex-direction: row; 
-      align-items: flex-start;
+      align-items: center;
       text-align: left;
     }
   }
 
-  &__image {
+  &__figure {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
-    object-fit: cover;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
 
     @include mediaquery("tablet") {
       width: 25%;
+      flex-shrink: 0;
+    }
+
+    .section__image {
+      width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+      object-fit: cover;
+      display: block;
+    }
+
+    .section__caption {
+      font-size: 0.85rem;
+      color: $text-muted;
+      text-align: center;
+      margin-top: 0.25rem;
+    }
+  }
+
+   &__content {
+    width: 100%;
+
+    @include mediaquery("tablet") {
+      width: 75%;
     }
   }
 
   &__text {
-    font-size: 0.95rem;
+    font-size: 0.8rem;
     color: $text-muted;
+    margin-bottom: 1rem;
 
     @include mediaquery("tablet") {
-      width: 75%;
+      font-size: 1rem;
     }
   }
 
@@ -77,12 +104,8 @@ i {
     }
   }
 
-  &--image-left {
-    // opcional, por defecto ya es izquierda
-  }
-
   @include mediaquery("desktop") {
-    padding: 50px 80px;
+    padding: 3rem 5rem;
 
     &__title {
       font-size: 2rem;
@@ -94,17 +117,13 @@ i {
   }
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 .volver {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 1.25rem;
+  right: 1.25rem;
 
-  width: 50px;
-  height: 50px;
+  width: 3rem;
+  height: 3rem;
 
   display: flex;
   align-items: center;
