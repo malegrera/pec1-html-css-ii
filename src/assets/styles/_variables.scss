@@ -3,13 +3,12 @@
 // Colores
 $primary-color: #3498db;
 $secondary-color: #66bb6a;
-$card-bg: #ffffff;
 $text-light: #ffffff;
 $text-dark: #333333;
 $text-muted: #666666;
 $black: #000000;
 $verde: #2e7d32;
-$arena: #f4e1c1;
+$arena: #fbf5eb;
 $iconos: #f1c40f;
 $azul-agua: #4fc3f7;
 $iconos-light: #ffd700;
@@ -17,10 +16,24 @@ $iconos-light: #ffd700;
 
 // Tipografía
 $font-text: 'Poppins', Helvetica, Arial, sans-serif;
-$font-title: 'Baumans', serif;
+$font-title: 'Baumans', Georgia, Times, serif;
+
 // Media queries
 $breakpoints: (
   "mobile": 480px,
   "tablet": 768px,
   "desktop": 1024px
 );
+
+// Slides
+$slide-height-desktop: 30rem;
+$slide-height-tablet: 20rem;
+$slide-height-mobile: 15rem;
+$slide-bg-color: $arena;
+$slide-border-radius: 1rem;
+$box-shadow-default: 0 0.25rem 1rem rgba(0, 0, 0, 0.1);
+$box-shadow-hover: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+
+// Animaciones
+$zoom-scale: 1.05;
+$transition-speed: 0.5s;
