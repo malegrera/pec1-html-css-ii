@@ -2,108 +2,104 @@
 @use "../mixins" as *;
 
 .glide {
+  position: relative;
   max-width: 100%;
   margin: 0 auto;
-  position: relative;
 
-  .glide__track {
+  &__track {
     overflow: hidden;
+  }
 
-    .glide__slides {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    
+  &__slides {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 
-      .glide__slide {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: $slide-height-mobile; 
-          @include mediaquery("tablet") {
+  &__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        height: $slide-height-mobile;
+    background-color: $slide-bg-color;
+    box-shadow: $box-shadow-default;
+    transition: box-shadow $transition-speed ease;
+
+
+    &:hover {
+      box-shadow: $box-shadow-hover;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: $slide-border-radius;
+      transition: transform $transition-speed ease;
+    }
+
+    &:hover img {
+      transform: scale($zoom-scale);
+    }
+
+    @include mediaquery("tablet") {
       height: $slide-height-tablet;
-      background-color: green;
-  }
+    }
 
-  @include mediaquery("desktop") {
+    @include mediaquery("desktop") {
       height: $slide-height-desktop;
-      background-color: red;
-    }
-        background-color: $slide-bg-color;
-       
-        box-shadow: $box-shadow-default;
-        transition: box-shadow 0.5s ease;
-
-        &:hover {
-          box-shadow: $box-shadow-hover;
-        }
-
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: center;
-          border-radius: 2rem;
-          display: block;
-          transition: transform 0.5s ease;
-        }
-
-        &:hover img {
-          transform: scale(1.05);
-        }
-      }
     }
   }
 
-  // Flechas centradas
-  .glide__arrows {
+
+  &__arrows {
     position: absolute;
     top: 50%;
-    left: 0;
     right: 0;
+    left: 0;
+    z-index: 10;
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
-    z-index: 10;
     pointer-events: none;
+
 
     button {
       pointer-events: all;
       cursor: pointer;
       padding: 0.5em 1em;
-      background: rgba(0, 0, 0, 0.5);
       color: #fff;
+      background: rgb(0 0 0 / 50%);
       border: none;
       border-radius: 1rem;
-      transition: background 0.3s;
+      transition: background $transition-speed;
 
       &:hover {
-        background: rgba(0, 0, 0, 0.8);
+        background: rgb(0 0 0 / 80%);
       }
     }
   }
 
-  .glide__bullets {
+  &__bullets {
     display: flex;
     justify-content: center;
     margin-top: 0.5em;
 
-    button {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
+    &-bullet {
+      width: 0.6rem;
+      height: 0.6rem;
+      margin: 0 0.3rem;
       border: none;
-      margin: 0 5px;
+      border-radius: 50%;
       background-color: #ccc;
       cursor: pointer;
 
-      &.glide__bullet--active {
+
+      &--active {
         background-color: #333;
       }
     }
   }
-
-
-
-
-  }
+}

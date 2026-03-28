@@ -2,11 +2,13 @@
  * Use this file to import partials.
  * Do not include SCSS code in this file.
  */
+
 /**
  * Import variables and mixins first
  */
 @use "variables";
 @use "mixins";
+
 /**
  * Import dependencies
  */
@@ -24,7 +26,6 @@
  * Import layouts
  * It's a best practice to use a different partial for each page
  */
-
 @use "layouts/home";
 
 /**

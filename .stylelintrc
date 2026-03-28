@@ -1,12 +1,49 @@
 {
- "extends": ["stylelint-config-recommended-scss"],
- "rules": {
-   "selector-class-pattern": "^.[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$",
-   "indentation": 2,
-   "color-hex-case": "lower",
-   "color-hex-length": "short",
-   "comment-no-empty": true,
-   "max-empty-lines": 1,
-   "max-line-length": 120
-   }
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-recommended-scss"
+  ],
+  "plugins": [
+    "stylelint-order"
+  ],
+  "rules": {
+    "selector-class-pattern": "^[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$",
+    "selector-max-id": 0,
+    "selector-max-combinators": 3,
+    "selector-no-qualifying-type": true,
+
+    "block-no-empty": true,
+    "comment-no-empty": true,
+    "comment-whitespace-inside": "always",
+    "no-empty-source": true,
+
+    "declaration-no-important": true,
+    "property-no-unknown": true,
+
+    "color-hex-length": "short",
+    "color-no-invalid-hex": true,
+    "color-named": "never",
+    "value-keyword-case": "lower",
+
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true,
+    "scss/dollar-variable-pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+    "import-notation": "string",
+    "max-nesting-depth": 3,
+    "order/order": [
+      "custom-properties",
+      "dollar-variables",
+      "declarations",
+      "rules",
+      "at-rules"
+    ],
+    "order/properties-order": [
+      "position", "top", "right", "bottom", "left", "z-index",
+      "display", "flex", "flex-direction", "justify-content", "align-items",
+      "width", "height", "margin", "padding", "overflow",
+      "font", "font-size", "line-height", "letter-spacing", "text-align", "color",
+      "background", "border", "border-radius", "box-shadow",
+      "transition", "transform"
+    ]
+  }
 }
