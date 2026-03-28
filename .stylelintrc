@@ -39,10 +39,16 @@
     ],
     "order/properties-order": [
       "position", "top", "right", "bottom", "left", "z-index",
-      "display", "flex", "flex-direction", "justify-content", "align-items",
-      "width", "height", "margin", "padding", "overflow",
+      "display", 
+      "flex", "flex-direction", "flex-wrap",
+      "justify-content", "align-items","align-content",
+      "gap","row-gap","column-gap",
+      "width", "height", 
+      "margin", "padding",
+      "overflow", "overflow-x", "overflow-y",
       "font", "font-size", "line-height", "letter-spacing", "text-align", "color",
       "background", "border", "border-radius", "box-shadow",
+      "cursor","pointer-events",
       "transition", "transform"
     ]
   }
