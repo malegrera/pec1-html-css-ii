@@ -6,17 +6,17 @@ $secondary-color: #66bb6a;
 $text-light: #fff;
 $text-muted: #666;
 $black: #000;
-$verde: #2e7d32;
-$arena: #fbf5eb;
-$iconos: #f1c40f;
-$azul-agua: #4fc3f7;
+$green-water: #2e7d32; 
+$white-sand: #fbf5eb;
+$icon-color: #f1c40f;
+$blue-water: #4fc3f7;
 $link-highlight: #28a745;
 $link-highlight-hover: #1e7e34;
 
 
 // Tipografía
-$font-text: 'Poppins', helvetica, arial, sans-serif;
 $font-title: 'Baumans', georgia, times, serif;
+$font-text: 'Poppins', helvetica, arial, sans-serif;
 
 // Media queries
 $breakpoints: (
@@ -25,11 +25,11 @@ $breakpoints: (
   "desktop": 1024px
 );
 
-// Slides
+// Galería
 $slide-height-desktop: 35rem;
 $slide-height-tablet: 25rem;
 $slide-height-mobile: 20rem;
-$slide-bg-color: $arena;
+$slide-bg-color: $white-sand;
 $slide-border-radius: 2rem;
 $box-shadow-default: 0 0.25rem 1rem rgb(0 0 0 / 10%);
 $box-shadow-hover: 0 0.5rem 1rem rgb(0 0 0 / 20%);

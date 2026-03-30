@@ -9,7 +9,7 @@ const Gallery = () => {
     startAt: 0,
     perView: 1,
     gap: 10,
-    autoplay: 3000,
+    autoplay: 4000,
   });
 
   function updateCaption() {

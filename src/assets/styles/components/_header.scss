@@ -3,23 +3,23 @@
 @use "sass:color";
 
 .header {
-  background-image: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), url('../images/principal.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  min-height: 30vh;
   padding: 1rem;
+  background-image: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), url('../images/principal.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   h1 {
     font-family: $font-title;
     font-size: 2rem;
+    font-weight: bold;
     text-align: center;
     color: $text-light;
-    font-weight: bold;
     text-wrap: balance;
 
     @include mediaquery("tablet") {
@@ -64,12 +64,12 @@
       gap: 0.5rem;
       padding: 0.5rem 0.75rem;
       font-size: 0.9rem;
-      background-color: $verde;
-      color: $arena;
-      border-radius: 1rem;
       text-decoration: none;
-      transition: background-color $transition-speed;
       white-space: nowrap;
+      color: $white-sand;
+      background-color: $green-water;
+      border-radius: 1rem;
+      transition: background-color $transition-speed;
 
       &:hover {
         background-color: $secondary-color;
